@@ -10,17 +10,34 @@ Study notes on [『SQL 第2版 ゼロからはじめるデータベース操作�
 $ docker-compose up -d
 ```
 
-### 2-1. Connect to MariaDB database
+### 2-1. Connect to MySQL database
 
 ```sh
-$ mysql -h127.0.0.1 -udev -p shop
+$ docker-compose exec mysql mysql -udev -p shop
 Enter password:
-Reading table information for completion of table and column names
-You can turn off this feature to get a quicker startup with -A
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.0.22 MySQL Community Server - GPL
 
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql>
+```
+
+### 2-2. Connect to MariaDB database
+
+```sh
+$ docker-compose exec mariadb mysql -udev -p shop
+Enter password:
 Welcome to the MariaDB monitor.  Commands end with ; or \g.
-Your MariaDB connection id is 7
-Server version: 10.5.1-MariaDB-1:10.5.1+maria~bionic mariadb.org binary distribution
+Your MariaDB connection id is 6
+Server version: 10.5.8-MariaDB-1:10.5.8+maria~focal mariadb.org binary distribution
 
 Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
 
@@ -29,13 +46,11 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 MariaDB [shop]>
 ```
 
-
-### 2-2. Connect to PostgreSQL database
+### 2-3. Connect to PostgreSQL database
 
 ```sh
-$ psql -h127.0.0.1 -p5432 -Udev -dshop
-Password for user dev:
-psql (12.2)
+$ docker-compose exec postgresql psql -Udev -dshop
+psql (13.1 (Debian 13.1-1.pgdg100+1))
 Type "help" for help.
 
 shop=#
