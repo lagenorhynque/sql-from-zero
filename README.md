@@ -17,9 +17,9 @@ $ docker-compose exec mysql mysql -udev -p shop
 Enter password:
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 9
-Server version: 8.0.22 MySQL Community Server - GPL
+Server version: 8.0.23 MySQL Community Server - GPL
 
-Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
 
 Oracle is a registered trademark of Oracle Corporation and/or its
 affiliates. Other names may be trademarks of their respective

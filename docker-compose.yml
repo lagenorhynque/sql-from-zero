@@ -1,7 +1,7 @@
 version: "3"
 services:
   mysql:
-    image: mysql:8.0.22
+    image: mysql:8.0.23
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_bin
     ports:
       - "3306:3306"
@@ -12,7 +12,6 @@ services:
       MYSQL_USER: dev
       MYSQL_PASSWORD: pass
       MYSQL_DATABASE: shop
-      TZ: "Asia/Tokyo"
 
   mariadb:
     image: mariadb:10.5.8
@@ -26,7 +25,6 @@ services:
       MYSQL_USER: dev
       MYSQL_PASSWORD: pass
       MYSQL_DATABASE: shop
-      TZ: "Asia/Tokyo"
 
   postgresql:
     image: postgres:13.1
@@ -39,7 +37,6 @@ services:
       POSTGRES_PASSWORD: pass
       POSTGRES_DB: shop
       POSTGRES_INITDB_ARGS: "--encoding=UTF-8 --locale=C"
-      TZ: "Asia/Tokyo"
 
 volumes:
   mysql-data:
