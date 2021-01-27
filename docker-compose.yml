@@ -7,6 +7,7 @@ services:
       - "3306:3306"
     volumes:
       - mysql-data:/var/lib/mysql
+      - ./mysql/conf.d:/etc/mysql/conf.d
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: dev
@@ -20,6 +21,7 @@ services:
       - "3307:3306"
     volumes:
       - mariadb-data:/var/lib/mysql
+      - ./mysql/conf.d:/etc/mysql/conf.d
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: dev
