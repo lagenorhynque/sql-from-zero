@@ -7,13 +7,13 @@ Study notes on [『SQL 第2版 ゼロからはじめるデータベース操作�
 ### 1. Start docker containers
 
 ```sh
-$ docker-compose up -d
+$ docker compose up -d
 ```
 
 ### 2-1. Connect to MySQL database
 
 ```sh
-$ docker-compose exec mysql mysql -udev -p shop
+$ docker compose exec mysql mysql -udev -p shop
 Enter password:
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 9
@@ -33,7 +33,7 @@ mysql>
 ### 2-2. Connect to MariaDB database
 
 ```sh
-$ docker-compose exec mariadb mysql -udev -p shop
+$ docker compose exec mariadb mysql -udev -p shop
 Enter password:
 Welcome to the MariaDB monitor.  Commands end with ; or \g.
 Your MariaDB connection id is 6
@@ -49,7 +49,7 @@ MariaDB [shop]>
 ### 2-3. Connect to PostgreSQL database
 
 ```sh
-$ docker-compose exec postgresql psql -Udev -dshop
+$ docker compose exec postgresql psql -Udev -dshop
 psql (13.1 (Debian 13.1-1.pgdg100+1))
 Type "help" for help.
 
